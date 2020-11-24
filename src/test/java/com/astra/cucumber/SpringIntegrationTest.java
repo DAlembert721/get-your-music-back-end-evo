@@ -15,6 +15,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.ClientHttpResponse;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
@@ -60,6 +61,18 @@ public class SpringIntegrationTest {
         }
 
 
+    }
+
+    void executePut(String url, Object body) throws IOException {
+        if (body != null){
+            HttpEntity<Object> request = new HttpEntity<>(body);
+            response = restTemplate
+                    .exchange(BASE_URL+url, HttpMethod.PUT, request, String.class).getStatusCode();
+            String a = "";
+        }
+        else {
+            response = HttpStatus.BAD_REQUEST;
+        }
     }
 
     private static class ResponseResultErrorHandler implements ResponseErrorHandler {
