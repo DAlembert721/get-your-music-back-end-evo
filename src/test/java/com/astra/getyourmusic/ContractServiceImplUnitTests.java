@@ -1,4 +1,4 @@
-package unit;
+package com.astra.getyourmusic;
 
 import com.astra.getyourmusic.model.contractSystem.Contract;
 import com.astra.getyourmusic.model.contractSystem.ContractState;

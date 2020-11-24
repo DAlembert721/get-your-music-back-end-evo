@@ -5,7 +5,6 @@ import com.astra.getyourmusic.model.mediaSystem.Instrument;
 import com.astra.getyourmusic.resource.LocationsResource.CityResource;
 import com.astra.getyourmusic.resource.mediaResource.InstrumentResource;
 import com.astra.getyourmusic.service.mediaService.InstrumentService;
-import io.swagger.models.auth.In;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
