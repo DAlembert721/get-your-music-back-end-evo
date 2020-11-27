@@ -90,6 +90,5 @@ public class ContractServiceImplUnitTests {
         //Assert
         assertThat(exception)
                 .hasMessage(message);
-
     }
 }
