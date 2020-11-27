@@ -48,9 +48,9 @@ public class QualificationServiceImplUnitTest {
         when(qualificationServiceMock.save(newQualification, 1L, 1L, 1L))
                 .thenReturn(newQualification);
 
-        Qualification contract = qualificationService.save(newQualification, 1L, 1L, 1L);
+        Qualification qualification = qualificationService.save(newQualification, 1L, 1L, 1L);
 
-        assertThat(contract).isEqualTo(contract);
+        assertThat(qualification).isEqualTo(newQualification);
     }
 
     @Test
@@ -71,7 +71,7 @@ public class QualificationServiceImplUnitTest {
 
         //Act
         Throwable exception = catchThrowable(() -> {
-            Qualification qualification = qualificationService.save(newQualification, 1L, 1L, 1L);
+                Qualification qualification = qualificationService.save(newQualification, 1L, 1L, 1L);
         });
         //Assert
         assertThat(exception)
